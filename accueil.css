@@ -1,0 +1,279 @@
+@font-face{
+	font-family:"mapolice";
+	src: url(mapolice.ttf)
+}
+
+@font-face{
+	font-family: "mapolice2";
+	src: url(mapolice2.ttf);
+}
+#bloc_page{
+	width: auto;
+}
+body{
+	margin:0px;
+	padding:0px;
+	background-color:rgb(247,239,230);
+	width:auto;
+}
+
+#en_tete{
+	background: url("image/logo.jpg") scroll no-repeat;
+	opacity: 0.9;
+	margin:0px;
+	padding:0px;
+	border-bottom: 2px black inset;
+
+}
+
+
+
+
+nav label{
+	display:none;}
+
+nav input[type=checkbox]{
+	display:none;
+}
+
+.mobile_reseaux{
+	display:none;
+}
+
+
+ul > #reseaux{
+	display:flex;
+	justify-content: center;
+	align-items: baseline;
+}
+
+.menu{
+	width:auto;
+	height:37px;
+	border-bottom:2px black inset;	
+}
+
+
+.menu > ul{         /*cibler ul suivant un nav*/
+	background-color:rgb(247,239,230);
+	display:flex;
+	width:auto;
+	justify-content: center;
+	height:37px;
+	margin:0px;
+	font-family:mapolice2,arial;
+	font-weight: bold;
+	}
+
+.deroulant{               /*gere les items du menu*/
+		display:inline-block; 
+		text-align: center;
+		font-size: 90%;
+		width:20%;
+		list-style-type: none;	
+		position:relative;
+		padding-top:2px;	
+	}
+
+.menu a{                       /* apparence des liens*/
+	text-decoration: none;
+	color:#645E63;
+	font-size: 150%; 
+}
+
+.sous{
+	display:none;
+}
+
+
+.deroulant:hover {
+ background-color:rgb(225,208,188);
+ height:35px;
+}
+
+.deroulant:hover .sous{
+	display:block;
+    background-color: rgb(247,239,230);
+    list-style-type: none;
+    position:absolute;
+    top:100%;
+    width:100%;
+    padding:0px;
+   }
+
+.sous li:hover a{
+color:rgb(200,185,167);
+ 
+}  
+
+
+#logo{
+display:flex;
+justify-content: center;
+align-items: center;
+padding-top:5%;
+padding-bottom: 5%;
+}
+
+
+.section{
+	background-color:rgb(247,239,230);
+}
+
+.recherche{
+	display:flex;
+	padding:10px;
+	margin-top:60px;
+	margin-bottom:60px;
+	border:2px solid black;
+	border-radius:10px 10px 10px 10px;
+	width:auto;
+	margin-left: 5px;
+	margin-right: 5px;
+}
+
+.recherche label{
+	font-family:mapolice2,arial;
+	font-size: 25px;
+	font-weight: bold;
+	margin-right:10px;
+}
+
+input #recherche{
+	flex-grow: 2;
+	height: 20px;
+}
+
+
+
+
+#presentation{
+	background: url("image/section.jpg") scroll no-repeat;
+	background-position: center; 
+    width:auto;
+    margin-top:10px;
+    margin-bottom:60px;
+    height:992px;
+
+}
+
+.presentation{
+	display:block;
+	margin:auto;
+	padding-top:200px;	
+}
+
+.presentation-mini{
+	display:none;
+}
+
+#bas_de_page{
+	display:block;
+	justify-content: center;
+	align-items: center;
+}
+
+#copyright,#reseaux{
+	display:flex;
+	justify-content: center;
+	align-items: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+@media all and (max-width:1000px){
+#bloc_page{
+	width:auto;
+
+	}
+
+#en_tete{
+		display:flex;
+		flex-direction: column-reverse;
+		border-bottom:2px solid black;
+	}
+
+.mobile{
+	display:block;
+	width:auto;
+	text-align: center;
+	border-top:2px solid black;
+	border-bottom:2px solid black;
+	padding:10px;
+	font-family:"mapolice2",arial;
+	font-weight: bold;
+	font-size: 20px;
+	background-color: rgb(213,189,160);
+}
+   
+
+.menu input[type=checkbox]:checked ~ ul{
+	display:block;
+	background-color:#E3CCB2;
+	padding-bottom:8px;
+	padding-top:8px;
+}
+
+.menu ul{
+	display:none;
+	padding:0px;
+}
+
+.deroulant{
+	width:100%;
+	background-color: #E3CCB2;
+		
+}
+
+.menu li:hover .sous{
+	width:auto;
+	display:block;
+	position:static;
+	margin-bottom:30px;
+	background-color:#F3E5D5
+}
+
+.sous li a{
+	width:100%;
+	text-align:center;}
+
+.sous a:hover{
+	color:rgb(206,183,157);
+}
+
+.mobile_reseaux{
+	display:flex;
+	justify-content: center;
+	align-items: center;
+}	
+
+
+#reseaux{
+	display:none;
+}
+
+#section{
+	margin-top:180px;
+	margin-bottom: 40px;	
+		
+	}
+ 
+ .presentation{
+ 	display:none;
+ }
+
+ .presentation-mini{
+ 	display:block;
+ 	margin:auto;
+ 	padding-top:180px;
+ }
+  
+}

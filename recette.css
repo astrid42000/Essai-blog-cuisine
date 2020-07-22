@@ -1,0 +1,335 @@
+@font-face{
+	font-family:"mapolice";
+	src: url(mapolice.ttf)
+}
+
+@font-face{
+	font-family: "mapolice2";
+	src: url(mapolice2.ttf);
+}
+
+
+body{
+	margin:0px;
+	padding:0px;
+	background-color:rgb(247,239,230);
+	width:auto;
+}
+
+#en_tete{
+	background: url("image/logo.jpg") scroll no-repeat;
+	opacity: 0.9;
+	margin:0px;
+	padding:0px;
+	border-bottom: 2px black inset;
+
+}
+
+.recherche{
+	display:flex;
+	padding:10px;
+	margin-top:60px;
+	margin-bottom:60px;
+	border:2px solid black;
+	border-radius:10px 10px 10px 10px;
+	width:auto;
+	margin-left: 5px;
+	margin-right: 5px;
+}
+
+.recherche label{
+	font-family:mapolice2,arial;
+	font-size: 25px;
+	font-weight: bold;
+	margin-right:10px;
+}
+
+input #recherche{
+	flex-grow: 2;
+	height: 20px;
+}
+
+nav label{
+	display:none;}
+
+nav input[type=checkbox]{
+	display:none;
+}
+
+.mobile_reseaux{
+	display:none;
+}
+
+ul > #reseaux{
+	display:flex;
+	justify-content: center;
+	align-items: baseline;
+}
+
+.menu{
+	width:auto;
+	height:37px;
+	border-bottom:2px black inset;	
+}
+
+
+.menu > ul{         /*cibler ul suivant un nav*/
+	background-color:rgb(247,239,230);
+	display:flex;
+	width:auto;
+	justify-content: center;
+	height:37px;
+	margin:0px;
+	font-family:mapolice2,arial;
+	font-weight: bold;
+	}
+
+.menu a{                       /* apparence des liens*/
+	text-decoration: none;
+	color:#645E63;
+	font-size: 150%; 
+}
+
+.deroulant{               /*gere les items du menu*/
+		display:inline-block; 
+		text-align: center;
+		font-size: 90%;
+		width:20%;
+		list-style-type: none;	
+		position:relative;
+		padding-top:2px;	
+	}
+
+.deroulant:hover {           /*survol item menu*/
+ background-color:rgb(225,208,188);
+ height:35px;
+}
+
+.deroulant:hover .sous{    /*affichage sous menu au survol*/
+	display:block;
+    background-color: rgb(247,239,230);
+    list-style-type: none;
+    position:absolute;
+    top:100%;
+    width:100%;
+    padding:0px;
+   }
+
+.sous{     /*sous menu*/
+	display:none;
+}
+
+
+.sous li:hover a{         /*couleur lien du sous menu au survol*/
+    color:rgb(200,185,167);    
+} 
+
+
+#logo{
+display:flex;
+justify-content: center;
+align-items: center;
+padding-top:5%;
+padding-bottom: 5%;
+}
+
+.nom{
+	font-family: mapolice2,arial;
+	font-weight:bold;
+}
+
+#section{
+	background-color:rgb(247,239,230);
+	display: flex;	
+}
+
+
+h1 {
+	font-family: mapolice,arial;
+	text-decoration: underline;
+	font-size:80px;
+	text-align:center;
+}
+
+
+h2{
+	text-decoration: underline;
+	font-size: 60px;
+	font-family: mapolice,arial;
+	text-align: center;
+	padding:0px;
+	margin-top:0px;
+}
+
+
+.info,.ingredients,.recette,.conseil
+{
+	border:2px solid black;
+    border-radius: 20px;
+    margin:20px;
+    width:auto;
+}
+
+
+.info, .conseil, .ingredients {
+	text-align: center;
+	
+}
+
+.info ul{
+	list-style-type: none;
+	padding:0px;
+	margin-top:20px;
+	margin-bottom: 30px;
+}
+
+.info h2{
+	margin-bottom: 8px;
+}
+
+
+.ingredients ul{
+	margin-top:20px;
+	margin-bottom: 30px;
+	list-style-type: none;
+	padding-left:10px;
+	padding-right: 10px;
+	
+}
+
+.ingredients li{
+	margin-top: 0px;
+	font-size: 18px;
+}
+
+.ingredients h2{
+	margin-bottom:7px;
+}
+
+.conseil ul{
+ margin-top:20px;
+ margin-bottom: 30px;
+}
+
+.conseil,#section{
+	vertical-align: center;
+	
+}
+
+.conseil h2{
+	margin-bottom: 7px;
+}
+
+.recette{
+	padding-left:20px;
+	padding-right:20px;
+	flex-grow: 2;
+}
+
+.recette p{
+	font-size: 18px;
+}
+
+figure{
+	float:right;
+}
+
+
+.recherche{
+	padding:10px;
+	margin-top:30px;
+	margin-bottom:60px;
+	border:2px solid black;
+	border-radius:10px 10px 10px 10px;
+	width:auto;
+}
+
+
+#bas_de_page{
+	display:block;
+	justify-content: center;
+	align-items: center;
+}
+
+#copyright,#reseaux{
+	display:flex;
+	justify-content: center;
+	align-items: center;
+}
+
+
+
+@media all and (max-width:1000px){
+#bloc_page{
+	width:auto;
+
+	}
+
+#en_tete{
+		display:flex;
+		flex-direction: column-reverse;
+		border-bottom:2px solid black;
+	}
+
+.mobile{
+	display:block;
+	width:auto;
+	text-align: center;
+	border-top:2px solid black;
+	border-bottom:2px solid black;
+	padding:10px;
+	font-family:"mapolice2",arial;
+	font-weight: bold;
+	font-size: 20px;
+	background-color: rgb(213,189,160);
+}
+   
+
+.menu input[type=checkbox]:checked ~ ul{
+	display:block;
+	background-color:#E3CCB2;
+	padding-bottom:8px;
+	padding-top:8px;
+}
+
+.menu ul{
+	display:none;
+	padding:0px;
+}
+
+.deroulant{
+	width:100%;
+	background-color: #E3CCB2;
+		
+}
+
+.menu li:hover .sous{
+	width:auto;
+	display:block;
+	position:static;
+	margin-bottom:30px;
+	background-color:#F3E5D5
+}
+
+.sous li a{
+	width:100%;
+	text-align:center;}
+
+.sous a:hover{
+	color:rgb(206,183,157);
+}
+
+#reseaux{
+	justify-content: center;
+	align-items: center;
+}	
+
+#section{
+	margin-top:180px;
+	margin-bottom: 40px;	
+		
+	}
+ 
+
+  
+}
